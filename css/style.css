@@ -52,9 +52,18 @@ table {
   border-spacing: 0;
 }
 
+html {
+  font-size: 10px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   height: 200vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 header {
@@ -70,6 +79,32 @@ header {
     position: relative;
     overflow: hidden;
   }
+}
+header .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  color: #fff;
+  font-size: 400%;
+}
+header .logo {
+  flex-basis: 50%;
+  text-transform: uppercase;
+  padding-left: 2rem;
+  border-left: 4px solid red;
+  margin-left: 2rem;
+}
+header .material-icons {
+  font-size: 6rem;
+  position: absolute;
+  top: 0.5rem;
+  right: 3rem;
+  cursor: pointer;
 }
 header h1 {
   color: #fff;
@@ -89,12 +124,12 @@ header h1 {
     font-size: 80px;
   }
 }
-header a {
+header .btn {
   color: #fff;
   text-decoration: none;
   z-index: 1;
   display: block;
-  background-color: #730202;
+  background-color: rgba(115, 2, 2, 0.4901960784);
   font-size: 28px;
   width: 150px;
   text-align: center;
@@ -103,8 +138,8 @@ header a {
   transition: 0.5s;
   box-shadow: 0 0 10px #fff;
 }
-header a:hover {
-  background-color: #8C0303;
+header .btn:hover {
+  background-color: rgba(140, 3, 3, 0.5411764706);
   box-shadow: 0 0 25px #fff;
 }
 header::after {

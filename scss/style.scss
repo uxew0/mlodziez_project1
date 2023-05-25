@@ -1,9 +1,18 @@
 @use 'variables' as *; 
 @use 'reset' as *; 
 
+html {
+    font-size: 10px;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     height: 200vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 header {
@@ -17,6 +26,37 @@ header {
     @media screen and (min-width: 900px) {
         position: relative;
         overflow: hidden;
+    }
+
+    .top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 6rem;
+        // background-color: $color1;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        color: #fff;
+        font-size: 400%;
+
+    }
+
+    .logo {
+        flex-basis: 50%;
+        text-transform: uppercase;
+        padding-left: 2rem;
+        border-left: 4px solid red;
+        margin-left: 2rem; 
+    }
+
+    .material-icons {
+        font-size: 6rem;
+        position: absolute;
+        top: .5rem;
+        right: 3rem;
+        cursor: pointer;
     }
     
     h1 {
@@ -39,7 +79,7 @@ header {
         }
     }
 
-    a {
+    .btn {
         color: #fff;
         text-decoration: none;
         z-index: 1;
