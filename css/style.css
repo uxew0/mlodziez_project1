@@ -88,7 +88,6 @@ header .top {
   height: 6rem;
   display: flex;
   align-items: center;
-  z-index: 1;
   color: #fff;
   font-size: 400%;
 }
@@ -98,6 +97,51 @@ header .logo {
   padding-left: 2rem;
   border-left: 4px solid red;
   margin-left: 2rem;
+  z-index: 2;
+}
+header span {
+  z-index: 2;
+}
+header nav {
+  display: none;
+}
+header nav span {
+  z-index: 3;
+}
+header nav ul {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0d0d0d;
+  z-index: 2;
+}
+@media screen and (min-width: 900px) {
+  header nav ul {
+    width: 25%;
+  }
+}
+header nav ul li {
+  flex-basis: 15%;
+  width: 100%;
+  border-bottom: 1px dotted rgba(140, 3, 3, 0.5411764706);
+}
+header nav ul li:nth-of-type(1) {
+  border-top: 1px dotted rgba(140, 3, 3, 0.5411764706);
+}
+header nav ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 30px;
+}
+header .nav-display-block {
+  display: block;
 }
 header .material-icons {
   font-size: 6rem;
@@ -165,6 +209,7 @@ header video {
 
 section {
   padding-top: 30px;
+  height: 100vh;
 }
 
 h2 {
